@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "581200154830",
+    "project_id": "wastify-a2ea5",
+    "storage_bucket": "wastify-a2ea5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:581200154830:android:f027d597674443f24f009f",
+        "android_client_info": {
+          "package_name": "com.ramm.wastify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1G_p7Y6W9qQmhW_yQJSaciwDUIGtSd8Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

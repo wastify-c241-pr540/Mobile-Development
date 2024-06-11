@@ -1,0 +1,244 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.ramm.ui.EdukasiActivity">
+
+    <!-- Other views such as nav bar here -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Organic Waste Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_organic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/image_organic"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_organic_waste" />
+
+                    <TextView
+                        android:id="@+id/title_organic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sampah Organik"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:id="@+id/description_organic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Deskripsi singkat sampah organik..."
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/button_organic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Selengkapnya"
+                        android:layout_gravity="end" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Anorganic Waste Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_anorganic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="6dp">
+
+                    <ImageView
+                        android:id="@+id/image_anorganic"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_anorganic_waste" />
+
+                    <TextView
+                        android:id="@+id/title_anorganic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sampah Anorganik"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:id="@+id/description_anorganic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Deskripsi singkat sampah anorganik..."
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/button_anorganic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Selengkapnya"
+                        android:layout_gravity="end" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Recycle Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_recycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="6dp">
+
+                    <ImageView
+                        android:id="@+id/image_recycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_recycle" />
+
+                    <TextView
+                        android:id="@+id/title_recycle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Daur Ulang"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:id="@+id/description_recycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Deskripsi singkat daur ulang..."
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/button_recycle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Selengkapnya"
+                        android:layout_gravity="end" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_navbar"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icon_home"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/baseline_home_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Home"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icon_user"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/menu_bar" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Features"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+Z
+            <ImageView
+                android:id="@+id/icon_fitur"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/baseline_person_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Account"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

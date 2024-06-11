@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">YourAppName</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">Sign in with google</string>
+    <string name="email">Email</string>
+    <string name="welcome">Selamat datang di wastify!</string>
+    <string name="login_text">Silahkan login terlebih dahulu.</string>
+    <string name="no_acc">Belum mempunyai akun?</string>
+    <string name="register_acc">Register</string>
+    <string name="register_text">Silahkan daftar akun.</string>
+    <string name="register_button">Register</string>
+    <string name="search_bar_hint">Search</string>
+    <string name="user_name">Nama Pengguna</string>
+    <string name="user_online">Online</string>
+    <string name="description_user">This is a sample post content. It can be multiple lines and contain text content.</string>
+    <string name="Home">Beranda</string>
+    <string name="Features">Fitur</string>
+    <string name="Account">Akun</string>
+    <string name="desc_login">Waste Classification and Education One Stop App to Learn About Waste, Dispose of it Responsibly</string>
+    <string name="skip_login">Skip Login</string>
+    <string name="education">Edukasi Mengenal Sampah</string>
+    <string name="klasification">Klasifikasi Jenis Sampah</string>
+    <string name="fitur_judul">Fitur</string>
+</resources>
