@@ -1,0 +1,15 @@
+realtime_object/*.iml
+realtime_object/.gradle
+realtime_object/local.properties
+realtime_object/.idea/caches
+realtime_object/.idea/libraries
+realtime_object/.idea/modules.xml
+realtime_object/.idea/workspace.xml
+realtime_object/.idea/navEditor.xml
+realtime_object/.idea/assetWizardSettings.xml
+realtime_object.DS_Store
+realtime_object/build
+realtime_object/captures
+realtime_object/.externalNativeBuild
+realtime_object/.cxx
+realtime_object/local.properties
