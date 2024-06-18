@@ -18,7 +18,7 @@
     <string name="Features">Fitur</string>
     <string name="Account">Akun</string>
     <string name="desc_login">Waste Classification and Education One Stop App to Learn About Waste, Dispose of it Responsibly</string>
-    <string name="skip_login">Skip Login</string>
+    <string name="skip">Skip_Login</string>
     <string name="education">Edukasi Mengenal Sampah</string>
     <string name="klasification">Klasifikasi Jenis Sampah</string>
     <string name="fitur_judul">Fitur</string>
@@ -33,6 +33,7 @@
     <string name="clasification_title">Klasifikasi Sampah</string>
     <string name="image_classifier_failed">Image classifier failed to initialize. See error logs for details</string>
     <string name="hasil">Hasil Analisis</string>
+    <string name="angkut">Angkut Sampah</string>
 
     <string name="organik">Jenis Sampah: Organik</string>
     <string name="anorganik">Jenis Sampah: Anorganik</string>

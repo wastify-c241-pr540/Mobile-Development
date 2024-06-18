@@ -3,12 +3,14 @@ package com.ramm.wastify
 import ClasificationHelper
 import android.Manifest
 import android.icu.text.NumberFormat
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.WindowInsets
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.camera.core.AspectRatio
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.Preview
@@ -40,6 +42,11 @@ class MainActivity : AppCompatActivity() {
 
         requestPermissionLauncher.launch(Manifest.permission.CAMERA)
     }
+    public override fun onResume() {
+        super.onResume()
+        startCamera()
+        hideSystemUI()
+    }
 
     private fun startCamera() {
         clasificationHelper =
@@ -70,7 +77,7 @@ class MainActivity : AppCompatActivity() {
                         }
                     }
                 })
-        val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
+        val cameraProviderFuture = ProcessCameraProvider.getInstance(this@MainActivity)
         cameraProviderFuture.addListener({
             val resolutionSelector = ResolutionSelector.Builder()
                 .setAspectRatioStrategy(AspectRatioStrategy.RATIO_16_9_FALLBACK_AUTO_STRATEGY)
@@ -85,7 +92,7 @@ class MainActivity : AppCompatActivity() {
                 clasificationHelper.classify(image)
             }
 
-            val cameraProvider: ProcessCameraProvider = cameraProviderFuture.get
+            val cameraProvider: ProcessCameraProvider = cameraProviderFuture.get()
             val preview = Preview.Builder().build().also {
                 it.setSurfaceProvider(userBinding.viewFinder.surfaceProvider)
             }
@@ -93,7 +100,7 @@ class MainActivity : AppCompatActivity() {
                 cameraProvider.unbindAll()
                 cameraProvider.bindToLifecycle(
                     this,
-                    cameraSelector,
+                    CameraSelector.DEFAULT_BACK_CAMERA,
                     preview,
                     imageAnalyzer
                 )
@@ -106,6 +113,19 @@ class MainActivity : AppCompatActivity() {
                 Log.e(TAG, "startCamera: ${exc.message}")
             }
         }, ContextCompat.getMainExecutor(this))
+    }
+
+    private fun hideSystemUI() {
+        @Suppress("DEPRECATION")
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            window.insetsController?.hide(WindowInsets.Type.statusBars())
+        } else {
+            window.setFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN
+            )
+        }
+        supportActionBar?.hide()
     }
 
     companion object {
